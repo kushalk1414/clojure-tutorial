@@ -40,8 +40,15 @@
 ;; Exercises:
 
 ;; Write a function using reduce that calculates the factorial of a number.
+(defn fac [n]
+  (if (< n 2) 1
+      (reduce * 1 (range 2 (+ n 1)))))
+
+(fac 3)
 
 ;; Use the map function to create the first 10 factorials.
+(map fac (range 1 11))
+
 
 ;; Write a function that generates the first n Fibonacci numbers.
 
